@@ -4,15 +4,16 @@
         <meta charset="UTF-8">
         <title>Contato - Full Stack Eletro</title>
         <link rel="stylesheet" href="./css/estilo.css">
+        <script src="./script/script.js"></script>
     </head>
     </head>
     <body>
         <!-- Menu -->
         <nav class="menu">
             <a href="./index.html"><img id="logotipo" src="./imagens/logotipo.jpeg" alt="Logotipo Full Stack Eletro"></a>
-            <a href="./produtos.html">Produtos</a>
-            <a href="./loja.html">Nossas Lojas</a>
-            <a href="./contato.html">Contato</a>
+            <a href="./produtos.html" class="menuA">Produtos</a>
+            <a href="./loja.html" class="menuA">Nossas Lojas</a>
+            <a href="./contato.html" class="menuA">Contato</a>
         </nav>
         <!-- Fim do Menu -->        
         <!-- conteúdo -->
@@ -35,10 +36,10 @@
             <section class="contatoForm">
                 <form>
                     <h2>Nome: </h2> 
-                    <input type="text">  
+                    <input type="text" id="nome"/>  
                     <h2>Mensagem: </h2>
-                    <textarea></textarea>
-                    <input id="submit" type="submit" value="Enviar">
+                    <textarea id="msg"></textarea>
+                    <input id="submit" type="button" value="Enviar" onclick="checkFrom()"/>
                 </form>
             </section>
             <!-- Fim do formulário -->

@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <title>Produtos - Full Stack Eletro</title>
         <link rel="stylesheet" href="./css/estilo.css">
+        <script src="./script/script.js"></script>
     </head>
     <body>
         <!-- Menu -->
         <nav class="menu">
             <a href="./index.html"><img id="logotipo" src="./imagens/logotipo.jpeg" alt="Logotipo Full Stack Eletro"></a>
-            <a href="./produtos.html">Produtos</a>
-            <a href="./loja.html">Nossas Lojas</a>
-            <a href="./contato.html">Contato</a>
+            <a href="./produtos.html" class="menuA">Produtos</a>
+            <a href="./loja.html" class="menuA">Nossas Lojas</a>
+            <a href="./contato.html" class="menuA">Contato</a>
         </nav>
         <!-- Fim do Menu -->   
         <main id="contProduto">
@@ -20,16 +21,17 @@
             <section id="categorias">
                 <h2>Categorias</h2>
                     <ol>
-                        <li><p>Geladeiras (3)</p></li>
-                        <li><p>Fogões (2)</p></li>
-                        <li><p>Microondas (3)</p></li>
-                        <li><p>Lavadoura de roupas (2)</p></li>
-                        <li><p>Lava-louças (2)</p></li>
+                        <li onclick="exibirTodos()">Todos (12)</li>
+                        <li onclick="exibirCategorias('geladeira')">Geladeiras (3)</li>
+                        <li onclick="exibirCategorias('fogao')">Fogões (2)</li>
+                        <li onclick="exibirCategorias('microondas')">Microondas (3)</li>
+                        <li onclick="exibirCategorias('lavaRoupa')">Lavadoura de roupas (2)</li>
+                        <li onclick="exibirCategorias('lavaLouca')">Lava-louças (2)</li>
                     </ol>
             </section>
             <section id="produtos">
-                <div>
-                    <img src="imagens/geladeira2.jpeg">
+                <div class="box-produto" id="geladeira">
+                    <img src="imagens/geladeira2.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Geladeira Frost Free Brastemo Side Inverse 540l</p>
                     <hr/>
@@ -37,8 +39,8 @@
                     <p class="valorAtual">R$ 5.019,00</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/geladeira1.jpeg">
+                <div class="box-produto" id="geladeira">
+                    <img src="imagens/geladeira1.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Geladeira Frost Free Brastemp Branca 375l</p>
                     <hr/>
@@ -46,8 +48,8 @@
                     <p class="valorAtual">R$ 1.910,00</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/geladeira3.jpeg">
+                <div class="box-produto" id="geladeira">
+                    <img src="imagens/geladeira3.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Geladeira Frost Free Consul Prata 340l</p>
                     <hr/>
@@ -55,8 +57,8 @@
                     <p class="valorAtual">R$ 2.069,00</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/fogão1.jpeg">
+                <div class="box-produto" id="fogao">
+                    <img src="imagens/fogão1.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Fogão 4  Bocas Consul Inox com Mesa de Vidro</p>
                     <hr/>
@@ -64,8 +66,8 @@
                     <p class="valorAtual">R$ 1.129,00</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/fogão1.jpeg">
+                <div class="box-produto" id="fogao">
+                    <img src="imagens/fogão1.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Fogão de Piso 4 Bocas Atlas Monaco com Acendimento Automático</p>
                     <hr/>
@@ -73,8 +75,8 @@
                     <p class="valorAtual">R$ 519,70</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/microondas1.jpeg">
+                <div class="box-produto" id="microondas">
+                    <img src="imagens/microondas1.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Microondas Consul 32l Inox 220v</p>
                     <hr/>
@@ -82,8 +84,8 @@
                     <p class="valorAtual">R$ 409,88</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/microondas2.jpeg">
+                <div class="box-produto" id="microondas">
+                    <img src="imagens/microondas2.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Microndas 25l Espelhado Philco 220v</p>
                     <hr/>
@@ -91,8 +93,8 @@
                     <p class="valorAtual">R$ 464,53</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/microondas1.jpeg">
+                <div class="box-produto" id="microondas">
+                    <img src="imagens/microondas1.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Forno Microondas Electrolux 20L Branco</p>
                     <hr/>
@@ -100,8 +102,8 @@
                     <p class="valorAtual">R$ 436,00</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/lavaLouca2.jpeg">
+                <div class="box-produto" id="lavaLouca">
+                    <img src="imagens/lavaLouca2.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Lava Louça Electrolux Inox com 10 Serviços, 06 Programas de Lavagem 127v</p>
                     <hr/>
@@ -109,8 +111,8 @@
                     <p class="valorAtual">R$ 2.799,90</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/lavaLouca1.jpeg">
+                <div class="box-produto" id="lavaLouca">
+                    <img src="imagens/lavaLouca1.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Lava Louça Compacta 8 Serviços Branca 127v Brastemp</p>
                     <hr/>
@@ -118,8 +120,8 @@
                     <p class="valorAtual">R$ 1.730,00</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/lavaRoupas2.jpeg">
+                <div class="box-produto" id="lavaRoupa">
+                    <img src="imagens/lavaRoupas2.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Lavadora de Roupa Brastemp 11KG com Turbo Performance Branca</p>
                     <hr/>
@@ -127,8 +129,8 @@
                     <p class="valorAtual">R$ 1.214,00</p>
                     <br/>
                 </div>
-                <div>
-                    <img src="imagens/lavaRoupas1.jpeg">
+                <div class="box-produto" id="lavaRoupa">
+                    <img src="imagens/lavaRoupas1.jpeg" onclick="destacar(this)">
                     <br/><br/>
                     <p>Lavadora de Roupas Philco Inverter 12KG</p>
                     <hr/>

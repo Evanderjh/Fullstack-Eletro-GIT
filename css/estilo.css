@@ -8,6 +8,7 @@ body{
 nav.menu{
     background-color: rgb(255, 0, 0);
     font-size: 18px;
+    height: 80px;
     width: 100%;
     position: fixed;
     left: 0px;
@@ -16,7 +17,7 @@ nav.menu{
 
 img#logotipo{
     width: 100px;
-    margin: 10px auto 10px;
+    margin: 10px 0px 10px;
 }
 
 .menu a{
@@ -25,7 +26,22 @@ img#logotipo{
     vertical-align: middle;
     text-decoration: none;
     font-weight: bold;
-    margin-left: 200px;
+    margin-left: 12%;
+}
+
+.menuA:hover{ 
+    background-color: #4610101a;
+    font-size: 20px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #4610101a;
+    margin-left: 11%;
+}
+
+#logotipo:hover{
+    width: 115px;
+    margin-top: 7px;
+    margin-left: -1%;
 }
 
 /* Fim Menu */
@@ -90,6 +106,7 @@ section.loja{
     width: 24%;
     padding-left: 9%;
     display: inline-block;
+    vertical-align: top;
 }
 
 .loja h2{
@@ -163,9 +180,19 @@ main#contProduto{
 }
 
 section#categorias{
-    width: 18%;
+    width: 19.5%;
     display: inline-block;
     vertical-align: top;
+}
+
+#categorias li{
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+#categorias li:hover{
+    background-color: rgba(255, 0, 0, 0.158);
+    font-weight: bold;
 }
 
 section#produtos{
@@ -175,16 +202,16 @@ section#produtos{
     margin-bottom: 50px;
 }
 
+#produtos img{
+    height: 120px;
+}
+
 #produtos div{
     width: 20%;
     display: inline-block;
     text-align: center;
     vertical-align: bottom;
     margin-left: 40px;
-}
-
-#produtos img{
-    height: 120px;
 }
 
 .valor{
