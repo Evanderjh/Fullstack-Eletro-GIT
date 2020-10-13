@@ -3,54 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <title>Contato - Full Stack Eletro</title>
+        <link rel="stylesheet" href="./css/estilo.css">
+    </head>
     </head>
     <body>
         <!-- Menu -->
-        <table width="100%" bgcolor="red">
-            <table width="100%" bgcolor="red">
-                <tr>
-                    <td align="center" width="25%"><a href="./index.html">
-                        <font color="white"><img width="100px" src="./imagens/logotipo.jpeg" alt="Logotipo Full Stack Eletro"></font>
-                     </a></td>
-                    <td align="center" width="25%"><a href="./produtos.html">
-                        <font color="white">Produtos</font>
-                    </a></td>
-                    <td align="center" width="25%"><a href="./loja.html">
-                        <font color="white">Nossas Lojas</font>
-                    </a></td>
-                    <td align="center" width="25%"><a href="./contato.html">
-                        <font color="white">Contato</font>
-                    </a></td>
-                </tr>
-            </table>
-        </table>
+        <nav class="menu">
+            <a href="./index.html"><img id="logotipo" src="./imagens/logotipo.jpeg" alt="Logotipo Full Stack Eletro"></a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./loja.html">Nossas Lojas</a>
+            <a href="./contato.html">Contato</a>
+        </nav>
         <!-- Fim do Menu -->        
-        <h2>Contato</h2>
-        <hr/>
-        <table border="0" width="100%" cellpadding="20">
-            <td width="50%" align="center">
-                <img src="./imagens/email.png" width="80px">
-                <font face="Arial" size="4">contato@fullstackeletro.com</font>
-            </td>
-            <td width="50%" align="center">
-                <img src="./imagens/whatsapp.jpeg" width="80px">
-                <font face="Arial" size="4">(11) 99999-9999</font>
-            </td>
-        </table>
-        <!-- Inicio do formulário -->
-        <form>
-            <h4>Nome: </h4> 
-            <input type="text" style="width: 400px;">  
-            <h4>Mensagem: </h4>
-            <textarea style="width: 400px;"></textarea>
-            <input type="submit" value="Enviar">
-        </form>
-        <!-- Fim do formulário -->
-        <br/>
-        <center>
-            <h4><font face="Arial" color="red">Formas de pagamento</font></h4>
-            <img src="./imagens/formasDePagamento.jpeg" alt="Formas de pagamento" width="30%"> 
-        </center>
-        <center><font face="Arial" size="2">&copy; Recode Pro</font></center>
+        <!-- conteúdo -->
+        <main id="contatoPage">
+            <section class="contato">
+                <h1>Contato</h1>
+                <hr/>
+                <br/><br/>
+                <div>
+                    <img src="./imagens/email.png">
+                    <p>contato@fullstackeletro.com</p>
+                </div>
+                <div>
+                    <img src="./imagens/whatsapp.jpeg">
+                    <p>(11) 99999-9999</p>
+                </div>
+            </section>
+            <br/><br/>
+            <!-- Inicio do formulário -->
+            <section class="contatoForm">
+                <form>
+                    <h2>Nome: </h2> 
+                    <input type="text">  
+                    <h2>Mensagem: </h2>
+                    <textarea></textarea>
+                    <input id="submit" type="submit" value="Enviar">
+                </form>
+            </section>
+            <!-- Fim do formulário -->
+        </main>
+        <!-- Fim do conteúdo -->
+        <br/><br/><br/>
+        <!-- Rodapé -->
+        <footer>
+            <p id="formasDePagamento">Formas de pagamento</p>
+            <img src="./imagens/formasDePagamento.jpeg" alt="Formas de pagamento"> 
+            <p id="rodape">&copy; Recode Pro</p>
+        </footer>
+        <!-- Fim do Rodapé -->
     </body>
 </html>
