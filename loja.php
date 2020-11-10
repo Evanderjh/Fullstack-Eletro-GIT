@@ -8,12 +8,9 @@
     </head>
     <body>
         <!-- Menu -->
-        <nav class="menu">
-            <a href="./index.html"><img id="logotipo" src="./imagens/logotipo.jpeg" alt="Logotipo Full Stack Eletro"></a>
-            <a href="./produtos.html" class="menuA">Produtos</a>
-            <a href="./loja.html" class="menuA">Nossas Lojas</a>
-            <a href="./contato.html" class="menuA">Contato</a>
-        </nav>
+        <?php
+            include('./script/menu.php');
+        ?>
         <!-- Fim do Menu -->              
         <!-- Conteúdo -->  
         <main>

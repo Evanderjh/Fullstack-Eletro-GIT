@@ -1,3 +1,14 @@
+<?php
+    include('./script/conexaobd.php');
+
+    if(isset($_POST['nome']) && isset($_POST['msg'])){
+        $nome = $_POST['nome'];
+        $msg = $_POST['msg'];
+
+        $sql = "insert into comentario (nome, msg) values ('$nome', '$msg')";
+        $result = $conn->query($sql);
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -9,12 +20,9 @@
     </head>
     <body>
         <!-- Menu -->
-        <nav class="menu">
-            <a href="./index.html"><img id="logotipo" src="./imagens/logotipo.jpeg" alt="Logotipo Full Stack Eletro"></a>
-            <a href="./produtos.html" class="menuA">Produtos</a>
-            <a href="./loja.html" class="menuA">Nossas Lojas</a>
-            <a href="./contato.html" class="menuA">Contato</a>
-        </nav>
+        <?php
+            include('./script/menu.php');
+        ?>
         <!-- Fim do Menu -->        
         <!-- conteúdo -->
         <main id="contatoPage">
@@ -34,15 +42,36 @@
             <br/><br/>
             <!-- Inicio do formulário -->
             <section class="contatoForm">
-                <form>
+                <form method="post" action="">
                     <h2>Nome: </h2> 
-                    <input type="text" id="nome"/>  
+                    <input type="text" id="nome" name="nome"/>  
                     <h2>Mensagem: </h2>
-                    <textarea id="msg"></textarea>
-                    <input id="submit" type="button" value="Enviar" onclick="checkFrom()"/>
+                    <input type="text" id="nome" name="msg"/>
+                    <input type="submit" id="submit" name="submit" value="Enviar" onclick="checkFrom()"/>
                 </form>
             </section>
             <!-- Fim do formulário -->
+            <!-- Comentários -->
+            <h2>Comentários</h2>
+            <hr/>
+            <?php
+                $sql = "select * from comentario";
+                $result = $conn->query($sql);
+
+                if($result->num_rows > 0){
+                    while($rows = $result->fetch_assoc()){
+            ?>
+            <div>
+                <p><b>Data: </b><?php echo $rows["data"] ?><br/> 
+                <b>Nome: </b><?php echo $rows["nome"] ?><br/> 
+                <b>Mensagem:</b><?php echo $rows["msg"] ?></p>
+                <hr/>
+            </div>
+            <?php
+                    }
+                }
+            ?>
+            <!-- Fim dos Comentários -->
         </main>
         <!-- Fim do conteúdo -->
         <br/><br/><br/>
