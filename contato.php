@@ -14,40 +14,40 @@
     <head>
         <meta charset="UTF-8">
         <title>Contato - Full Stack Eletro</title>
-        <link rel="stylesheet" href="./css/estilo.css">
+        <!-- <link rel="stylesheet" href="./css/estilo.css"> -->
         <script src="./script/script.js"></script>
     </head>
     </head>
     <body>
         <!-- Menu -->
         <?php
+            include('./script/bootstrap.php');
             include('./script/menu.php');
         ?>
         <!-- Fim do Menu -->        
         <!-- conteúdo -->
-        <main id="contatoPage">
-            <section class="contato">
-                <h1>Contato</h1>
-                <hr/>
-                <br/><br/>
-                <div>
-                    <img src="./imagens/email.png">
-                    <p>contato@fullstackeletro.com</p>
+        <main class="container">
+            <h1 class="mt-4">Contato</h1>
+            <hr/>
+            <section class="row mt-4 text-center">
+                <div class="col-md">
+                    <img src="./imagens/email.png" style="height: 15vh;">
+                    <p class="mt-4"><b>contato@fullstackeletro.com</b></p>
                 </div>
-                <div>
-                    <img src="./imagens/whatsapp.jpeg">
-                    <p>(11) 99999-9999</p>
+                <div class="col-md">
+                    <img src="./imagens/whatsapp.jpeg" style="height: 15vh;">
+                    <p class="mt-4"><b>(11) 99999-9999</b></p>
                 </div>
             </section>
             <br/><br/>
             <!-- Inicio do formulário -->
-            <section class="contatoForm">
-                <form method="post" action="">
-                    <h2>Nome: </h2> 
-                    <input type="text" id="nome" name="nome"/>  
-                    <h2>Mensagem: </h2>
-                    <input type="text" id="nome" name="msg"/>
-                    <input type="submit" id="submit" name="submit" value="Enviar" onclick="checkFrom()"/>
+            <section class="container mt-4 mb-4">
+                <form class="form" method="post" action="">
+                    <label for="nome"><b>Nome: </b></label> 
+                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Digite seu nome"/>  
+                    <label class="mt-4"for="msg"><b>Mensagem: </b></label>
+                    <input class="form-control" type="text" id="msg" name="msg" placeholder="Digite sua mensagem"/>
+                    <input class="btn btn-primary btn-block mt-4" type="submit" id="submit" name="submit" value="Enviar" onclick="checkFrom()"/>
                 </form>
             </section>
             <!-- Fim do formulário -->
@@ -61,11 +61,11 @@
                 if($result->num_rows > 0){
                     while($rows = $result->fetch_assoc()){
             ?>
-            <div>
+            <div class="container">
                 <p><b>Data: </b><?php echo $rows["data"] ?><br/> 
                 <b>Nome: </b><?php echo $rows["nome"] ?><br/> 
                 <b>Mensagem:</b><?php echo $rows["msg"] ?></p>
-                <hr/>
+                <hr class="mt-4 mb-4"/>
             </div>
             <?php
                     }
@@ -75,12 +75,10 @@
         </main>
         <!-- Fim do conteúdo -->
         <br/><br/><br/>
-        <!-- Rodapé -->
-        <footer>
-            <p id="formasDePagamento">Formas de pagamento</p>
-            <img src="./imagens/formasDePagamento.jpeg" alt="Formas de pagamento"> 
-            <p id="rodape">&copy; Recode Pro</p>
-        </footer>
-        <!-- Fim do Rodapé -->
+
+       <?php
+            include('./script/footer.php')
+        ?>
+
     </body>
 </html>

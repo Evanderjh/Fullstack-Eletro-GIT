@@ -15,7 +15,7 @@ function exibirCategorias(categoria){
 }
 
 function exibirTodos(){
-        let caixaDeProdutos = document.getElementsByClassName('box-produto');
+        let caixaDeProdutos = document.getElementsByClassName('col-4 box-produto');
     
         for(let i=0; i<caixaDeProdutos.length; i++){
         caixaDeProdutos[i].style = "display:inline-block";
