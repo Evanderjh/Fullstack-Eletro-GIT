@@ -78,3 +78,10 @@ FROM fullstackeletro.pedidos
 		ON pedidos.id_cliente = clientes.id_cliente
 	INNER JOIN fullstackeletro.produtos
 		ON pedidos.id_produto = produtos.id_produto;
+        
+CREATE VIEW fullstackeletro.produtos_promocao AS
+SELECT id_produto, nome, preco, preco_final
+FROM fullstackeletro.produtos
+WHERE preco_final <= 600;
+
+SELECT * FROM fullstackeletro.produtos_promocao;

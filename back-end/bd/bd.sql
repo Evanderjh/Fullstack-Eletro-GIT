@@ -46,3 +46,8 @@ CREATE TABLE fullstackeletro.comentarios(
     msg VARCHAR(250),
     `data` DATETIME DEFAULT now()/*Pega a hora do "AGORA"*/
 )Engine = innoDB;
+
+CREATE VIEW teste AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;

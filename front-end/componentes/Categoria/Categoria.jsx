@@ -16,7 +16,7 @@ const Categoria = () => {
     }
     
     function exibirTodos(event){
-            let categoria = event.target;
+            // let categoria = event.target;
 
             let caixaDeProdutos = document.getElementsByClassName('box-produto');
         

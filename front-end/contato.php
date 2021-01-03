@@ -1,14 +1,3 @@
-<!-- 
-    include('./script/conexaobd.php');
-
-    if(isset($_POST['nome']) && isset($_POST['msg'])){
-        $nome = $_POST['nome'];
-        $msg = $_POST['msg'];
-
-        $sql = "insert into comentario (nome, msg) values ('$nome', '$msg')";
-        $result = $conn->query($sql);
-    } -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Full Stack Eletro</title>
-    <script src="./script/script.js"></script>
     <style>
         img#logotipo {
             height: 10vh;
